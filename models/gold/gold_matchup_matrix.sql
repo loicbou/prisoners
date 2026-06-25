@@ -35,5 +35,17 @@ matchup as (
     group by run_id, player_a, player_b, matchup_id
 )
 
-select * from matchup
-order by run_id, final_score_a desc
+select
+    run_id,
+    player_a,
+    player_b,
+    matchup_id,
+    final_score_a,
+    final_score_b,
+    cooperation_rate_a_pct,
+    cooperation_rate_b_pct,
+    exploitations_by_a,
+    exploitations_by_b,
+    match_winner
+from matchup
+order by run_id asc, final_score_a desc

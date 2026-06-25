@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: prisoners
     database: "project-c3a17a7a-877c-4020-b49"
-    schema: prisoners
+    schema: dbt_lbouchet_prisoners
     description: "Données brutes du tournoi Dilemme du Prisonnier — chargées depuis Parquet"
     tables:
       - name: tournament_bronze
