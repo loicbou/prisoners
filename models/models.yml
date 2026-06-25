@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: silver_rounds
+    description: "Tours enrichis avec indicateurs booléens et colonnes dérivées"
+    columns:
+      - name: run_id
+        description: "Identifiant du run"
+      - name: matchup_id
+        description: "Clé du match (playerA_vs_playerB)"
+      - name: tour_bucket
+        description: "Tranche de 100 tours pour l'analyse temporelle"
+      - name: mutual_cooperation
+        description: "1 si les deux joueurs ont coopéré ce tour"
+      - name: exploitation_by_a
+        description: "1 si A a trahi pendant que B coopérait"
+
+  - name: gold_tournament_summary
+    description: "Classement final des stratégies avec score, taux de coopération et ranking"
+
+  - name: gold_matchup_matrix
+    description: "Confrontation croisée — résultat de chaque match A vs B"
+
+  - name: gold_behavioral_drift
+    description: "Évolution du taux de coopération par tranche de 100 tours"
+
+  - name: gold_forgiveness_index
+    description: "Fréquence de retour à la coopération après trahison reçue"
