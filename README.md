@@ -48,9 +48,9 @@ simulate.py  (Python + Ollama)
 
 | Couche | Stockage | Contenu |
 |--------|----------|---------|
-| **Bronze** | Parquet local → BigQuery `prisoners` | Données brutes issues de la simulation |
-| **Silver** | BigQuery `dbt_lbouchet_prisoners` | Tours enrichis, colonnes dérivées, nettoyage |
-| **Gold** | BigQuery `dbt_lbouchet_prisoners` | Agrégats analytiques prêts à l'emploi |
+| **Bronze** | Parquet local → BigQuery `dbt_lbouchet_prisoners` | Données brutes issues de la simulation |
+| **Silver** | BigQuery `dbt_lbouchet_prisoners_dbt_lbouchet_prisoners` | Tours enrichis, colonnes dérivées, nettoyage |
+| **Gold** | BigQuery `dbt_lbouchet_prisoners_dbt_lbouchet_prisoners` | Agrégats analytiques prêts à l'emploi |
 
 ---
 
@@ -68,8 +68,8 @@ simulate.py  (Python + Ollama)
 ### 1. Cloner le repo
 
 ```bash
-git clone https://github.com/<ton-repo>/prisoner-dilemma-etl.git
-cd prisoner-dilemma-etl
+git clone https://github.com/loicbou/prisoner-dilemma-etl.git
+cd prisoners
 ```
 
 ### 2. Installer les dépendances Python
@@ -161,7 +161,7 @@ Dans la [console BigQuery](https://console.cloud.google.com/bigquery), créer de
 | Dataset | Usage |
 |---------|-------|
 | `prisoners` | Table brute Bronze |
-| `dbt_lbouchet_prisoners` | Modèles Silver et Gold dbt |
+| `dbt_lbouchet_prisoners_dbt_lbouchet_prisoners` | Modèles Silver et Gold dbt |
 
 ### Uploader le Parquet
 
@@ -185,7 +185,7 @@ Vérifier que la connexion BigQuery dans dbt Cloud pointe vers :
 | Paramètre | Valeur |
 |-----------|--------|
 | Location | `EU` |
-| Dataset cible | `dbt_lbouchet_prisoners` |
+| Dataset cible | `dbt_lbouchet_prisoners_dbt_lbouchet_prisoners` |
 
 ### Lancer dbt
 
@@ -199,7 +199,7 @@ Ou depuis dbt Cloud : **Deploy → Run Now**
 
 ```
 models/
-├── sources.yml                       ← source: prisoners.tournament_bronze
+├── sources.yml                       ← source: dbt_lbouchet_prisoners.tournament_bronze
 ├── models.yml                        ← documentation
 ├── silver/
 │   └── silver_rounds.sql             ← enrichissement + colonnes dérivées
@@ -296,7 +296,7 @@ dbt docs generate && dbt docs serve
 ## 🗂️ Structure du repo
 
 ```
-prisoner-dilemma-etl/
+prisoners/
 │
 ├── simulate.py              # Génération des données + agent Ollama
 ├── requirements.txt         # pandas, pyarrow, requests
