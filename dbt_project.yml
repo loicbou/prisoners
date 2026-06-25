@@ -1,0 +1,26 @@
+name: 'prisoners'
+version: '1.0.0'
+config-version: 2
+
+profile: 'prisoner_dilemma'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  prisoners:
+    silver:
+      +materialized: view
+      +schema: dbt_lbouchet_prisoners
+    gold:
+      +materialized: table
+      +schema: dbt_lbouchet_prisoners
