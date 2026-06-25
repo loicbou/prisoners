@@ -1,0 +1,82 @@
+user:
+  outputs:
+    default:
+      keyfile_json:
+        auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+        auth_uri: https://accounts.google.com/o/oauth2/auth
+        client_email: dbt-41@project-c3a17a7a-877c-4020-b49.iam.gserviceaccount.com
+        client_id: '106725773448684690278'
+        client_x509_cert_url: https://www.googleapis.com/robot/v1/metadata/x509/dbt-41%40project-c3a17a7a-877c-4020-b49.iam.gserviceaccount.com
+        private_key: '-----BEGIN PRIVATE KEY-----
+
+          MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDC4+hmeAnOE2X4
+
+          ZS4JtVD89df53T1GR174LGigxImrAH34fWBuNWEOv+vsF3CeHAEmlcrdaxKuzCuQ
+
+          /18BivuMymx4sFqGh4WPJm57aqQZNxF0y6I+ralz0KAYHoDyH/DFGXW81RgqsSyB
+
+          +7Sucu3DsGPAKVtVEtToEujjh0IidxCJ6Z19pnQIqS0zL+2woUprj8lIeeYK5mxj
+
+          yfgWa4GbqrOjCz48jtSbjQLhsQIa6X27YMrrUnAzJ87+cIWODqxWDFRKiinC7vn9
+
+          QpaVjHzQ5Jx/fCKOxE/oyHYAGI59u6yOHpvXxJmrBCf8YO4qV7GE5L97CVhrjruY
+
+          FKLpxvBPAgMBAAECggEAV4fZ+K/AI5ylxz7WQwj682oNUw0xOI/UkR0M7uvmsvVZ
+
+          HpJdDZKO4XuEX/iVHYYRZD2RrAmrjfNoO8reZkiAO1ctCbWXKuXSMB2AMJEQW7zW
+
+          a8ELwR/pQ/l29e45VsXOsw+AyEti+8Wwaj7dAx7eN+5Qlt1cRmTbV9IqZAp7QxOy
+
+          FXDGzRrA2HEjN/aae0E7DRTwPFB7Geg0sLovgiz37QC0+J+IqagLTmPDHE4hb7oO
+
+          V2rNnvJ8pbW5UWr4vuAJfXS1Joq89Mbf5z9MkJfsWVFPBre7k+6MV7zw4kqc2dHs
+
+          JLXWpOhF2H97DUfCen1qel/qq6QEjbx9kedZ0xmaSQKBgQD3pAwcxSXbEKG7ujhZ
+
+          z19X8gXOkEUWjwg8d1+cIC5AzaFwpI++EUpSGZe97CwhaaOm0Px5ka+R2hl3RaXi
+
+          YmZue0sFx2jzgwXCVRXaKRZr7Azja3MRgNRM8iNqXkgGXOfwFRuS2LV75YS4BcoC
+
+          VNjLVwHKgaaetI2CVuxOxs2ORwKBgQDJeAYx/Vl5KCjyt7BmTZWukE78wcIkWBs8
+
+          pNMtQABGkSiPH3DSgAio6Tqc3b9O6g/OnUEkLJ9c21RNpi+ArJMQnrqoHR7OoDVv
+
+          Ns3R5wymsZe0I1KuoVnXjYgDSzGu9k/7QvQ/JvILH0XJekopQZ3nu8iWHedkW4ob
+
+          gIbOISBpuQKBgQChZLDgLzy0wOonRv5iydwBnSJbtXrRcPaVMdeGERMT+PA2UYm8
+
+          /dfKGhPjG4DHZenaVmm1cVVTYSknqqSqHidT6dbDNWsZCVM/i+RqAk0ymOztaqHb
+
+          znKOk2CxejDGtNYUii0mT0Y4MSWGKX+2dUW1gEcSi9zjohh30d7AmKBvEQKBgEHR
+
+          75w3XBrkDvS1JHFX2ZYNWXDkUGwVSNi4NLHs3eowFGMl73MmFy4v/FExdQXwHDfx
+
+          Uk3iMjJhCZrQt2Y/e1CLuwmfcegpmSt7aSSxaoWvMZPNkn6xAiwU9iG1WEcD+79n
+
+          8WoMbDlL/z3CsSXnZRJHXFIG9QjpiyZPCDuhwPgpAoGBAK/Z56m5rjLVU1MNJBuW
+
+          nHr/37oM5MDC59cF+yap8BplT0MD/U2zOVL0j+JL0IVi1JjX0iA6eGkDMVU9sz2T
+
+          VaiN64cWNZa4/CJ6cLtuHbxvBKYV/DYncfgcEZig96MDA3Swi7ok8JFviaJjqPS+
+
+          9WIlTojGC6TnQZi5mmWpL8tT
+
+          -----END PRIVATE KEY-----
+
+          '
+        private_key_id: bb6a1c080394e9659485958210372db14514d9af
+        project_id: project-c3a17a7a-877c-4020-b49
+        token_uri: https://oauth2.googleapis.com/token
+        type: service_account
+      method: service-account-json
+      project: project-c3a17a7a-877c-4020-b49
+      schema: dbt_lbouchet_prisoners
+      scopes:
+      - https://www.googleapis.com/auth/bigquery
+      - https://www.googleapis.com/auth/cloud-platform
+      - https://www.googleapis.com/auth/drive
+      - https://www.googleapis.com/auth/userinfo.email
+      target_name: default
+      threads: 4
+      type: bigquery
+  target: default

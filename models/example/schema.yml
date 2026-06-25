@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: prisoners
+    database: "project-c3a17a7a-877c-4020-b49"
+    schema: prisoners
+    description: "Données brutes du tournoi Dilemme du Prisonnier — chargées depuis Parquet"
+    tables:
+      - name: tournament_bronze
+        description: "Table brute issue du simulate.py — un enregistrement par tour par match"
+        columns:
+          - name: run_id
+            description: "Identifiant unique du run de tournoi (8 caractères)"
+          - name: tour
+            description: "Numéro du tour (1 à 2000)"
+          - name: player_a
+            description: "Nom de la stratégie du joueur A"
+          - name: player_b
+            description: "Nom de la stratégie du joueur B"
+          - name: choice_a
+            description: "Choix du joueur A : COOPERATE ou DEFECT"
+          - name: choice_b
+            description: "Choix du joueur B : COOPERATE ou DEFECT"
+          - name: gain_a
+            description: "Gain du joueur A pour ce tour (0, 1, 3 ou 5)"
+          - name: gain_b
+            description: "Gain du joueur B pour ce tour (0, 1, 3 ou 5)"
+          - name: cumul_a
+            description: "Score cumulé du joueur A depuis le début du match"
+          - name: cumul_b
+            description: "Score cumulé du joueur B depuis le début du match"
